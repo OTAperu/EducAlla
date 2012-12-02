@@ -1,0 +1,10 @@
+.page-header
+  h1 Edit lesson
+
+- form_for(lesson, {action: path_to.lesson(lesson), method: 'PUT', id: "lesson_form"}, function (form) {
+  != partial('lessons/form.jade', {locals: {form: form, lesson: lesson}})
+  .actions
+    != form.submit('Update lesson', {class: 'btn primary'})
+    span= ' or '
+    != link_to('Cancel', path_to.lesson(lesson), {class: 'btn'})
+- });

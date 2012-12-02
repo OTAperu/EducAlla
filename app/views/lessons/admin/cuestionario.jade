@@ -1,0 +1,29 @@
+form#frmQuizz
+  .clonedfrm
+    .control-group
+      //- != label_tag("Pregunta", {class: "control-label"})
+      .controls
+        textarea.askQu(name="pregs[]", class="span5", rows="3", placeholder="Escriba la pregunta y añade las opciones marcando con check las correctas")
+    .control-group
+      //- != label_tag("Opciones", {class: "control-label"})
+      #frmOptions.controls
+        .clonedOption
+          label.checkbox
+            input.optCheck(type="checkbox", name="checks[]")
+            .input-append
+              input.optName(type="text", name="opts[]")
+              a.clone.btn.btn-success(href="#")
+                i.icon-plus.icon-white
+              a.remove.btn.btn-danger(href="#")
+                i.icon-trash.icon-white
+    .control-group
+      .controls
+        select.askTime(name="time[]")
+          option(value=10) 10 segs
+          option(value=20) 20 segs
+          option(value=30) 30 segs
+    .control-group
+      .controls.ctrlform
+        button.clone.btn.btn-primary(type="button") Clone
+        button.remove.btn.btn-danger(type="button") Remove
+button.pubQuizz.btn.btn-success(type="button") Publicar

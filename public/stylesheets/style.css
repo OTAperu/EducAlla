@@ -1,0 +1,8 @@
+@media (min-width: 980px){body{padding-top:50px}
+}.navbar-fixed-top .brand{padding-right:0;padding-left:0;margin-right:20px;margin-left:10px;font-weight:bold;color:#777;text-shadow:0 1px 0 rgba(255,255,255,0.1),0 0 30px rgba(255,255,255,0.125);-webkit-transition:all .2s linear;-moz-transition:all .2s linear;-ms-transition:all .2s linear;-o-transition:all .2s linear;transition:all .2s linear}
+.navbar-fixed-top .brand:hover{text-decoration:none}
+#chat{background:#fff;overflow-x:auto;height:150px;margin-bottom:10px;border:1px solid #808080;border-radius:5px}
+.ok{color:#008000}
+.video iframe,.video video{width:100%}
+#panelOptions .btn-link{background:#eee;border:1px solid #ccc;border-radius:5px;display:block;padding:5px}
+#panelImage{max-height:300px;overflow:hidden;margin-bottom:5px}

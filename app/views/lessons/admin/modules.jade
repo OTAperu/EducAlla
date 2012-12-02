@@ -1,0 +1,32 @@
+//- h2 Modulos
+//- ul
+//-   li: a(href="#") Crear cuestionario
+//-   li: a(href="#") Compartir archivo
+//-   li: a(href="#") preguntas con puntaje
+//-   li: a(href="#") synced presentation/video
+//-   li: a(href="#") pizarra
+
+#panelOptions.well
+  a.btn-link(type="button", data-toggle="collapse", data-target='#panelOpts1')
+    i.icon-comment
+    |  Resaltar Respuesta
+  #panelOpts1.collapse
+    input#mod2in(type="text", placeholder="Indicar palabra a resaltar o dejar vacio.", value=lesson.getData('hlword'))
+  //- End panel1
+
+  a.btn-link(type="button", data-toggle="collapse", data-target='#panelOpts2')
+    i.icon-question-sign
+    |  Realizar Preguntas
+  #panelOpts2.collapse
+    include cuestionario
+  //- End panel2
+
+  a.btn-link(type="button", data-toggle="collapse", data-target='#panelOpts3')
+    i.icon-share
+    |  Compartir archivo
+  #panelOpts3.collapse
+    ul
+      each archivo in loadFiles(lesson.id)
+        li
+          a(href="/lessons/#{lesson.id}/#{archivo}")= archivo
+  //- End panel3

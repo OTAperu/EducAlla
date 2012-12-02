@@ -1,0 +1,27 @@
+.navbar.navbar-fixed-top.navbar-inverse
+  .navbar-inner
+    .container
+      button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.brand(href="/") appEduca
+      .nav-collapse.collapse
+        ul.nav
+          li
+            a(href='/users') Users
+          li
+            a(href='/lessons') Lessons
+          li
+            a(href='#') Otro
+        ul.nav.pull-right
+          if (user.username)
+            li.dropdown
+              a.dropdown-toggle(href="#", data-toggle="dropdown")= user.username
+                b.caret
+              ul.dropdown-menu
+                li: a(href="/users/#{user.id}") Perfil
+                li.divider
+                li: a(href="/logout") Salir
+          else
+            a.btn(href="/login") Ingresar

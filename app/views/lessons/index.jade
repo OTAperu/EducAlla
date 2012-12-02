@@ -1,0 +1,25 @@
+.page-header
+  h1 Index of lesson
+
+.row
+  .span12
+      p!= link_to ('<i class="icon-plus icon-white"></i> New lesson', path_to.new_lesson(), {class: 'btn btn-primary'})
+      if lessons.length > 0
+        table.table.table-striped
+          thead
+            tr
+              th Lesson
+              th Categoria
+            tbody
+              - lessons.forEach(function (lesson) {
+                tr
+                  td
+                    strong!= link_to(lesson.title, path_to.lesson(lesson))
+                  td= lesson.cat
+
+                    - // != link_to('<i class="icon-edit icon-white"></i> Edit', path_to.edit_lesson(lesson), {class: 'btn btn-mini btn-primary'}) + ' '
+                    - // != link_to('<i class="icon-remove icon-white"></i> Delete', path_to.lesson(lesson), {class: 'btn btn-mini btn-danger', method: 'delete', remote: true, jsonp: '(function (u) {location.href = u;})'})
+              - });
+      else
+        p.alert.alert-block.alert-info
+          strong No lessons were found.

@@ -1,0 +1,20 @@
+.control-group
+  != form.label("title", false, {class: "control-label"})
+  .controls
+    != form.input("title", {type: 'text'})
+.control-group
+  != form.label("data", false, {class: "control-label"})
+  .controls
+    != form.textarea("data", {cols:"80", rows:"6", class:"span5"})
+.control-group
+  != form.label("author", false, {class: "control-label"})
+  .controls
+    != form.input("author", {type: 'text'})
+.control-group
+  != form.label("grade", false, {class: "control-label"})
+  .controls
+    != form.input("grade", {type: 'text'})
+.control-group
+  != form.label("cat", false, {class: "control-label"})
+  .controls
+    != form.input("cat", {type: 'text'})

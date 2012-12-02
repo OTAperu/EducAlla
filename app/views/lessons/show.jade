@@ -1,0 +1,22 @@
+- var isMod = (user.id === lesson.author)
+
+h3= lesson.title
+.row
+  .span6
+    .video.well.well-small
+      if isMod
+        .input-append
+          input#videoSource(type="text", name="source", placeholder="Source", value=lesson.getData('source'))
+          a#updSource.btn.btn-success(href="#")
+            i.icon-facetime-video.icon-white
+            |  Update
+      else
+        != lesson.getData('source')
+    .chatbox.well.well-small
+      #chat
+      input#msg(type="text")
+  .span6
+    if isMod
+      include admin/modules
+    else
+      #ppt!= lesson.getData('quizz')

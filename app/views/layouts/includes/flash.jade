@@ -1,0 +1,11 @@
+- var flash = request.flash('info').pop(); if (flash) {
+  .alert.alert-info
+    a.close(data-dismiss='alert') ×
+    span= flash
+- }
+
+- flash = request.flash('error').pop(); if (flash) {
+  .alert.alert-error
+    a.close(data-dismiss='alert') ×
+    span= flash
+- }

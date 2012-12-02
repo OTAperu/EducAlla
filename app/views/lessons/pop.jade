@@ -1,0 +1,26 @@
+- var isMod = (user.id === lesson.author)
+!!! 5
+html
+  include ../layouts/includes/head
+  body
+    include ../layouts/includes/navbar
+    .container
+      include ../layouts/includes/flash
+      h3= lesson.title
+      .row
+        .span6
+          .video.alert.alert-success.well-small
+            video#video(height='280', width='300', controls='controls')
+              source(src="/videos/50bb1edc3b12289d35000001.mp4")
+          .chatbox.well.well-small
+            #chat
+            input#msg(type="text")
+        .span6
+          #panelImage.well
+            h4.muted Presentacion
+          #panelAsk.alert.alert-info
+            h4.muted Preguntas e Informacion
+      include ../layouts/includes/footer
+    != javascript_include_tag('http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', 'bootstrap', 'rails', 'application')
+    script(src='/socket.io/socket.io.js')
+    != javascript_include_tag('http://popcornjs.org/code/dist/popcorn-complete.min.js', '../json/50bb1edc3b12289d35000001')

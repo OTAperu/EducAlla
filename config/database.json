@@ -1,0 +1,11 @@
+{ "development":
+  { "driver":   "mongoose"
+  , "url": "mongodb://localhost:27017/appeduca"
+  }
+, "test":
+  { "driver":   "memory"
+  }
+, "production":
+  { "driver":   "memory"
+  }
+}

@@ -1,0 +1,11 @@
+!!! 5
+html
+  include includes/head
+  body
+    include includes/navbar
+    .container
+      include includes/flash
+      != body
+
+      include includes/footer
+    != javascript_include_tag('http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', 'bootstrap', 'rails')
